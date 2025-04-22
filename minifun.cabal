@@ -35,6 +35,10 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , llvm-hs-pretty ==0.9.0.0
+    , llvm-hs-pure ==9.0.0
+    , parsec
+    , text
   default-language: Haskell2010
 
 executable minifun-exe
@@ -48,7 +52,11 @@ executable minifun-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , llvm-hs-pretty ==0.9.0.0
+    , llvm-hs-pure ==9.0.0
     , minifun
+    , parsec
+    , text
   default-language: Haskell2010
 
 test-suite minifun-test
@@ -63,5 +71,9 @@ test-suite minifun-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , llvm-hs-pretty ==0.9.0.0
+    , llvm-hs-pure ==9.0.0
     , minifun
+    , parsec
+    , text
   default-language: Haskell2010
